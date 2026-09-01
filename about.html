@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>chontent — About</title>
+<meta name="description" content="chontent is the Swiss content agency — strategy, production, and publishing for growing brands.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { background:#FFFFFF; color:#141414; font-family: "IBM Plex Sans", system-ui, sans-serif; }
+  .display { font-family: "Archivo", system-ui, sans-serif; }
+  a { text-decoration: none; }
+  .nav-link { color: #68635D; }
+  .nav-link:hover { color: #141414; }
+  .nav-link-active { color: #141414; font-weight: 600; }
+  .btn-primary:hover { filter: brightness(0.92); }
+  .card { transition: transform 0.15s ease, box-shadow 0.15s ease; }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 12px 28px -18px rgba(0,0,0,0.22); }
+
+  .frame { position: relative; }
+  .frame-tl { position:absolute; top:-1px; left:-1px; width:18px; height:18px; border-top:3px solid #D52B1E; border-left:3px solid #D52B1E; }
+  .frame-tr { position:absolute; top:-1px; right:-1px; width:18px; height:18px; border-top:3px solid #D52B1E; border-right:3px solid #D52B1E; }
+  .frame-bl { position:absolute; bottom:-1px; left:-1px; width:18px; height:18px; border-bottom:3px solid #D52B1E; border-left:3px solid #D52B1E; }
+  .frame-br { position:absolute; bottom:-1px; right:-1px; width:18px; height:18px; border-bottom:3px solid #B08D2F; border-right:3px solid #B08D2F; }
+  .frame-tl-lg { position:absolute; top:-2px; left:-2px; width:44px; height:44px; border-top:4px solid #D52B1E; border-left:4px solid #D52B1E; }
+  .frame-tr-lg { position:absolute; top:-2px; right:-2px; width:44px; height:44px; border-top:4px solid #D52B1E; border-right:4px solid #D52B1E; }
+  .frame-bl-lg { position:absolute; bottom:-2px; left:-2px; width:44px; height:44px; border-bottom:4px solid #D52B1E; border-left:4px solid #D52B1E; }
+  .frame-br-lg { position:absolute; bottom:-2px; right:-2px; width:44px; height:44px; border-bottom:4px solid #B08D2F; border-right:4px solid #B08D2F; }
+  .frame-tl-white { position:absolute; top:-2px; left:-2px; width:44px; height:44px; border-top:4px solid #FFFFFF; border-left:4px solid #FFFFFF; }
+  .frame-tr-white { position:absolute; top:-2px; right:-2px; width:44px; height:44px; border-top:4px solid #FFFFFF; border-right:4px solid #FFFFFF; }
+  .frame-bl-white { position:absolute; bottom:-2px; left:-2px; width:44px; height:44px; border-bottom:4px solid #FFFFFF; border-left:4px solid #FFFFFF; }
+
+  .pad-x { padding-left:72px; padding-right:72px; }
+  .nav { position:sticky; top:0; z-index:10; display:flex; align-items:center; justify-content:space-between; padding-top:22px; padding-bottom:22px; background:#FFFFFF; border-bottom:2px solid #B08D2F; }
+  .nav-links { display:flex; align-items:center; gap:40px; }
+  .why-grid { display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:28px; }
+  .founder-row { display:flex; align-items:center; gap:64px; }
+  .founder-photo { flex-shrink:0; width:280px; height:340px; overflow:hidden; background:#F5F4F1; }
+
+  @media (max-width: 880px) {
+    .pad-x { padding-left:24px; padding-right:24px; }
+    .nav-links { gap:20px; }
+    .nav-link:not(.nav-link-active) { display:none; }
+    .why-grid { grid-template-columns:1fr; }
+    .founder-row { flex-direction:column; align-items:flex-start; gap:32px; }
+    .founder-photo { width:220px; height:270px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<div class="nav pad-x">
+  <a href="index.html" style="display:flex; align-items:center; gap:11px; color:#141414;">
+    <svg width="26" height="26" viewBox="0 0 100 100">
+      <path d="M20,44 L20,20 L44,20" fill="none" stroke="#D52B1E" stroke-width="9" stroke-linecap="butt" stroke-linejoin="miter"></path>
+      <path d="M56,20 L80,20 L80,44" fill="none" stroke="#D52B1E" stroke-width="9" stroke-linecap="butt" stroke-linejoin="miter"></path>
+      <path d="M20,56 L20,80 L44,80" fill="none" stroke="#D52B1E" stroke-width="9" stroke-linecap="butt" stroke-linejoin="miter"></path>
+      <path d="M56,80 L80,80 L80,56" fill="none" stroke="#B08D2F" stroke-width="9" stroke-linecap="butt" stroke-linejoin="miter"></path>
+    </svg>
+    <div class="display" style="font-size:21px; font-weight:800; letter-spacing:-0.01em;">chontent</div>
+  </a>
+  <div class="nav-links">
+    <a href="about.html" class="nav-link nav-link-active" style="font-size:15px;">About</a>
+    <a href="index.html#services" class="nav-link" style="font-size:15px;">Services</a>
+    <a href="index.html#process" class="nav-link" style="font-size:15px;">Process</a>
+    <a href="index.html#contact" class="nav-link" style="font-size:15px;">Contact</a>
+    <a href="index.html#contact" class="btn-primary" style="background:#D52B1E; color:#FFFFFF; padding:11px 22px; border-radius:2px; font-size:14px; font-weight:600;">Contact us</a>
+  </div>
+</div>
+
+<!-- INTRO -->
+<div class="pad-x" style="display:flex; flex-direction:column; align-items:flex-start; gap:24px; padding-top:120px; padding-bottom:90px; max-width:760px;">
+  <div style="display:flex; align-items:center; gap:10px; color:#D52B1E; font-size:13px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase;">
+    <span style="width:9px; height:9px; background:#D52B1E;"></span>
+    About us
+  </div>
+  <h1 class="display" style="margin:0; font-size:52px; line-height:1.1; font-weight:800; letter-spacing:-0.02em;">
+    chontent &mdash; the Swiss content agency.
+  </h1>
+  <p style="margin:0; font-size:19px; line-height:1.65; color:#68635D;">
+    We started chontent on one idea: content should be run like infrastructure, not treated as an afterthought. Every brand we work with gets a team that plans it, produces it, and stays through publishing &mdash; with Swiss-style precision and no fluff in between.
+  </p>
+</div>
+
+<!-- WHY WE'RE GREAT -->
+<div class="pad-x" style="padding-top:90px; padding-bottom:110px; border-top:1px solid #E4E1DC; background:#F5F4F1;">
+  <div style="display:flex; flex-direction:column; gap:12px; max-width:560px; margin-bottom:56px;">
+    <span style="color:#D52B1E; font-size:13px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase;">Why chontent</span>
+    <h2 class="display" style="margin:0; font-size:34px; font-weight:800; letter-spacing:-0.01em;">What makes us different.</h2>
+  </div>
+  <div class="why-grid">
+
+    <div class="card frame" style="display:flex; flex-direction:column; gap:20px; padding:32px; background:#FFFFFF;">
+      <div class="frame-tl"></div><div class="frame-tr"></div><div class="frame-bl"></div><div class="frame-br"></div>
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D52B1E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9 3h6l1 3.2M9 3L8 6.2M4 9.5l2.6-1.8M4 9.5l1.1 3M20 9.5l-2.6-1.8M20 9.5l-1.1 3M8.5 21l-1-3.3M8.5 21h7M15.5 21l1-3.3"></path>
+        <circle cx="12" cy="12" r="4.2"></circle>
+      </svg>
+      <h3 class="display" style="margin:0; font-size:19px; font-weight:700;">Precision, not guesswork</h3>
+      <p style="margin:0; font-size:15px; line-height:1.6; color:#68635D;">We treat content like a system: audited, planned, and measured &mdash; not just written and hoped for.</p>
+    </div>
+
+    <div class="card frame" style="display:flex; flex-direction:column; gap:20px; padding:32px; background:#FFFFFF;">
+      <div class="frame-tl"></div><div class="frame-tr"></div><div class="frame-bl"></div><div class="frame-br"></div>
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D52B1E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="4" width="18" height="16" rx="1.5"></rect>
+        <path d="M3 8h18"></path>
+        <path d="M12 12v6M9 15l3-3 3 3"></path>
+      </svg>
+      <h3 class="display" style="margin:0; font-size:19px; font-weight:700;">Strategy through publishing</h3>
+      <p style="margin:0; font-size:15px; line-height:1.6; color:#68635D;">We don't hand off a deck and disappear. We stay hands-on from the first audit to the moment content goes live.</p>
+    </div>
+
+    <div class="card frame" style="display:flex; flex-direction:column; gap:20px; padding:32px; background:#FFFFFF;">
+      <div class="frame-tl"></div><div class="frame-tr"></div><div class="frame-bl"></div><div class="frame-br"></div>
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D52B1E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="3" width="9" height="9" rx="1"></rect>
+        <rect x="12" y="3" width="9" height="9" rx="1"></rect>
+        <rect x="3" y="12" width="9" height="9" rx="1"></rect>
+        <rect x="12" y="12" width="9" height="9" rx="1"></rect>
+      </svg>
+      <h3 class="display" style="margin:0; font-size:19px; font-weight:700;">Built on your platforms</h3>
+      <p style="margin:0; font-size:15px; line-height:1.6; color:#68635D;">Shopify, TYPO3, or a custom build &mdash; we work inside the platforms your brand actually runs on.</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- FOUNDER -->
+<div class="pad-x founder-row" style="padding-top:110px; padding-bottom:110px; border-top:1px solid #E4E1DC;">
+  <div class="founder-photo frame">
+    <div class="frame-tl-lg"></div>
+    <div class="frame-tr-lg"></div>
+    <div class="frame-bl-lg"></div>
+    <div class="frame-br-lg"></div>
+    <img src="images/founder.jpg" alt="Yves, founder of chontent" style="width:100%; height:100%; object-fit:cover; display:block;">
+  </div>
+  <div style="display:flex; flex-direction:column; align-items:flex-start; gap:18px; max-width:520px;">
+    <span style="color:#D52B1E; font-size:13px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase;">Founder</span>
+    <h2 class="display" style="margin:0; font-size:32px; font-weight:800; letter-spacing:-0.01em;">Yves</h2>
+    <div style="font-size:15px; font-weight:600; color:#B08D2F; letter-spacing:0.02em;">CEO, chontent</div>
+    <p style="margin:0; font-size:17px; line-height:1.65; color:#68635D;">Yves founded chontent to bring that same precision to content work &mdash; planning it, producing it, and making sure it actually ships, not just gets approved.</p>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="pad-x" style="padding-bottom:100px;">
+  <div class="frame" style="display:flex; flex-direction:column; align-items:center; text-align:center; gap:18px; background:#D52B1E; padding:80px 48px;">
+    <div class="frame-tl-white"></div>
+    <div class="frame-tr-white"></div>
+    <div class="frame-bl-white"></div>
+    <div class="frame-br-lg"></div>
+    <div style="width:36px; height:3px; background:#B08D2F;"></div>
+    <h2 class="display" style="margin:0; font-size:38px; font-weight:800; letter-spacing:-0.01em; color:#FFFFFF; max-width:560px;">Let&rsquo;s talk about your content.</h2>
+    <p style="margin:0; font-size:16px; color:#FFFFFF; opacity:0.88; max-width:440px;">Book a short call and we&rsquo;ll tell you honestly what&rsquo;s working and what isn&rsquo;t.</p>
+    <a href="index.html#contact" style="margin-top:8px; background:#FFFFFF; color:#D52B1E; padding:15px 32px; border-radius:2px; font-size:15px; font-weight:700;">Contact us</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="pad-x" style="display:flex; align-items:center; justify-content:space-between; padding-top:36px; padding-bottom:36px; border-top:1px solid #E4E1DC; flex-wrap:wrap; gap:12px;">
+  <div style="display:flex; align-items:center; gap:9px;">
+    <svg width="19" height="19" viewBox="0 0 100 100">
+      <path d="M20,44 L20,20 L44,20" fill="none" stroke="#D52B1E" stroke-width="9" stroke-linecap="butt" stroke-linejoin="miter"></path>
+      <path d="M56,20 L80,20 L80,44" fill="none" stroke="#D52B1E" stroke-width="9" stroke-linecap="butt" stroke-linejoin="miter"></path>
+      <path d="M20,56 L20,80 L44,80" fill="none" stroke="#D52B1E" stroke-width="9" stroke-linecap="butt" stroke-linejoin="miter"></path>
+      <path d="M56,80 L80,80 L80,56" fill="none" stroke="#B08D2F" stroke-width="9" stroke-linecap="butt" stroke-linejoin="miter"></path>
+    </svg>
+    <div class="display" style="font-size:15px; font-weight:800;">chontent</div>
+  </div>
+  <div style="font-size:14px; color:#68635D;">&copy; 2026 chontent &middot; chontent.com &middot; yves@chontent.com</div>
+</div>
+
+</body>
+</html>
