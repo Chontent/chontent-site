@@ -37,16 +37,16 @@
   .nav { position:sticky; top:0; z-index:10; display:flex; align-items:center; justify-content:space-between; padding-top:22px; padding-bottom:22px; background:#FFFFFF; border-bottom:2px solid #B08D2F; }
   .nav-links { display:flex; align-items:center; gap:40px; }
   .why-grid { display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:28px; }
-  .founder-row { display:flex; align-items:center; gap:64px; }
-  .founder-photo { flex-shrink:0; width:280px; height:340px; overflow:hidden; background:#F5F4F1; }
-  .team-photo { flex-shrink:0; width:280px; height:340px; overflow:hidden; background:#F5F4F1; }
+  .team-grid { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:56px; }
+  .founder-photo { flex-shrink:0; width:240px; height:290px; overflow:hidden; background:#F5F4F1; }
+  .team-photo { flex-shrink:0; width:240px; height:290px; overflow:hidden; background:#F5F4F1; }
 
   @media (max-width: 880px) {
     .pad-x { padding-left:24px; padding-right:24px; }
     .nav-links { gap:20px; }
     .nav-link:not(.nav-link-active) { display:none; }
     .why-grid { grid-template-columns:1fr; }
-    .founder-row { flex-direction:column; align-items:flex-start; gap:32px; }
+    .team-grid { grid-template-columns:1fr; gap:48px; }
     .founder-photo { width:220px; height:270px; }
     .team-photo { width:220px; height:270px; }
   }
@@ -132,37 +132,40 @@
   </div>
 </div>
 
-<!-- FOUNDER -->
-<div class="pad-x founder-row" style="padding-top:110px; padding-bottom:110px; border-top:1px solid #E4E1DC;">
-  <div class="founder-photo frame">
-    <div class="frame-tl-lg"></div>
-    <div class="frame-tr-lg"></div>
-    <div class="frame-bl-lg"></div>
-    <div class="frame-br-lg"></div>
-    <img src="images/founder.jpg" alt="Yves, founder of chontent" style="width:100%; height:100%; object-fit:cover; display:block;">
-  </div>
-  <div style="display:flex; flex-direction:column; align-items:flex-start; gap:18px; max-width:520px;">
-    <span style="color:#D52B1E; font-size:13px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase;">Founder</span>
-    <h2 class="display" style="margin:0; font-size:32px; font-weight:800; letter-spacing:-0.01em;">Yves</h2>
-    <div style="font-size:15px; font-weight:600; color:#B08D2F; letter-spacing:0.02em;">CEO, chontent</div>
-    <p style="margin:0; font-size:17px; line-height:1.65; color:#68635D;">Yves founded chontent to bring that same precision to content work &mdash; planning it, producing it, and making sure it actually ships, not just gets approved.</p>
-  </div>
-</div>
-
 <!-- TEAM -->
-<div class="pad-x founder-row" style="padding-top:0; padding-bottom:110px;">
-  <div class="team-photo frame">
-    <div class="frame-tl-lg"></div>
-    <div class="frame-tr-lg"></div>
-    <div class="frame-bl-lg"></div>
-    <div class="frame-br-lg"></div>
-    <img src="images/noemi.jpg" alt="Noemi, copywriter and translator at chontent" style="width:100%; height:100%; object-fit:cover; display:block;">
-  </div>
-  <div style="display:flex; flex-direction:column; align-items:flex-start; gap:18px; max-width:520px;">
+<div class="pad-x" style="padding-top:110px; padding-bottom:110px; border-top:1px solid #E4E1DC;">
+  <div style="display:flex; flex-direction:column; gap:12px; max-width:560px; margin-bottom:56px;">
     <span style="color:#D52B1E; font-size:13px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase;">Team</span>
-    <h2 class="display" style="margin:0; font-size:32px; font-weight:800; letter-spacing:-0.01em;">Noemi</h2>
-    <div style="font-size:15px; font-weight:600; color:#B08D2F; letter-spacing:0.02em;">Copywriter &amp; Translator</div>
-    <p style="margin:0; font-size:17px; line-height:1.65; color:#68635D;">Noemi handles the Feinschliff &mdash; the copy and translation work that makes sure everything chontent publishes reads exactly right, in every language.</p>
+    <h2 class="display" style="margin:0; font-size:34px; font-weight:800; letter-spacing:-0.01em;">The people behind chontent.</h2>
+  </div>
+  <div class="team-grid">
+
+    <div style="display:flex; flex-direction:column; align-items:flex-start; gap:18px;">
+      <div class="founder-photo frame">
+        <div class="frame-tl-lg"></div>
+        <div class="frame-tr-lg"></div>
+        <div class="frame-bl-lg"></div>
+        <div class="frame-br-lg"></div>
+        <img src="images/founder.jpg" alt="Yves, founder of chontent" style="width:100%; height:100%; object-fit:cover; display:block;">
+      </div>
+      <h3 class="display" style="margin:0; font-size:26px; font-weight:800; letter-spacing:-0.01em;">Yves</h3>
+      <div style="font-size:15px; font-weight:600; color:#B08D2F; letter-spacing:0.02em;">Co-Founder &amp; CEO</div>
+      <p style="margin:0; font-size:16px; line-height:1.65; color:#68635D; max-width:400px;">Yves founded chontent to bring precision to content work &mdash; planning it, producing it, and making sure it actually ships, not just gets approved.</p>
+    </div>
+
+    <div style="display:flex; flex-direction:column; align-items:flex-start; gap:18px;">
+      <div class="team-photo frame">
+        <div class="frame-tl-lg"></div>
+        <div class="frame-tr-lg"></div>
+        <div class="frame-bl-lg"></div>
+        <div class="frame-br-lg"></div>
+        <img src="images/noemi.jpg" alt="Noemi, copywriter and translator at chontent" style="width:100%; height:100%; object-fit:cover; display:block;">
+      </div>
+      <h3 class="display" style="margin:0; font-size:26px; font-weight:800; letter-spacing:-0.01em;">Noemi</h3>
+      <div style="font-size:15px; font-weight:600; color:#B08D2F; letter-spacing:0.02em;">Co-Founder, Copywriter &amp; Translator</div>
+      <p style="margin:0; font-size:16px; line-height:1.65; color:#68635D; max-width:400px;">Noemi handles the feinschliff &mdash; the copy and translation work that makes sure everything chontent publishes reads exactly right, in every language.</p>
+    </div>
+
   </div>
 </div>
 
