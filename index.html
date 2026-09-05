@@ -85,10 +85,10 @@
   </a>
   <div class="nav-links">
     <a href="about.html" class="nav-link nav-link-persist" style="font-size:15px;">About</a>
-    <a href="#services" class="nav-link" style="font-size:15px;">Services</a>
-    <a href="#process" class="nav-link" style="font-size:15px;">Process</a>
-    <a href="#contact" class="nav-link" style="font-size:15px;">Contact</a>
-    <a href="#contact" class="btn-primary" style="background:#D52B1E; color:#FFFFFF; padding:11px 22px; border-radius:2px; font-size:14px; font-weight:600;">Contact us</a>
+    <button type="button" data-scroll-target="services" class="nav-link" style="font-size:15px; background:none; border:none; cursor:pointer; font-family:inherit; padding:0; margin:0;">Services</button>
+    <button type="button" data-scroll-target="process" class="nav-link" style="font-size:15px; background:none; border:none; cursor:pointer; font-family:inherit; padding:0; margin:0;">Process</button>
+    <button type="button" data-scroll-target="contact" class="nav-link" style="font-size:15px; background:none; border:none; cursor:pointer; font-family:inherit; padding:0; margin:0;">Contact</button>
+    <button type="button" data-scroll-target="contact" class="btn-primary" style="background:#D52B1E; color:#FFFFFF; padding:11px 22px; border-radius:2px; font-size:14px; font-weight:600; border:none; cursor:pointer; font-family:inherit;">Contact us</button>
   </div>
 </div>
 
@@ -104,8 +104,8 @@
       chontent is a Swiss content agency based in Bern and Z&uuml;rich, working with growing brands on strategy, content, SEO, ads, feinschliff, and the websites to publish it all on, handled end-to-end by people who work with the latest tools every day, not just talk about them.
     </p>
     <div style="display:flex; align-items:center; gap:16px; margin-top:8px;">
-      <a href="#contact" class="btn-primary" style="background:#D52B1E; color:#FFFFFF; padding:15px 28px; border-radius:2px; font-size:15px; font-weight:600;">Contact us</a>
-      <a href="#services" class="btn-ghost" style="border:1px solid #E4E1DC; color:#68635D; padding:15px 28px; border-radius:2px; font-size:15px; font-weight:600;">See our services</a>
+      <button type="button" data-scroll-target="contact" class="btn-primary" style="background:#D52B1E; color:#FFFFFF; padding:15px 28px; border-radius:2px; font-size:15px; font-weight:600; border:none; cursor:pointer; font-family:inherit;">Contact us</button>
+      <button type="button" data-scroll-target="services" class="btn-ghost" style="border:1px solid #E4E1DC; color:#68635D; padding:15px 28px; border-radius:2px; font-size:15px; font-weight:600; cursor:pointer; font-family:inherit; background:none;">See our services</button>
     </div>
   </div>
   <div class="hero-visual frame">
@@ -295,7 +295,8 @@
     });
   }
 
-  // Smooth-scroll to in-page sections without leaving a "#" in the address bar.
+  // Smooth-scroll to in-page sections. These are buttons, not links, so no
+  // "#" ever appears in a href or in the address bar.
   function scrollToSection(id) {
     var el = document.getElementById(id);
     if (el) {
@@ -305,26 +306,21 @@
     return false;
   }
 
-  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
-    link.addEventListener('click', function (e) {
-      var id = link.getAttribute('href').slice(1);
-      if (scrollToSection(id)) {
-        e.preventDefault();
-        if (window.history && history.replaceState) {
-          history.replaceState(null, '', window.location.pathname + window.location.search);
-        }
-      }
+  document.querySelectorAll('[data-scroll-target]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      scrollToSection(btn.getAttribute('data-scroll-target'));
     });
   });
 
-  // Arriving from another page with a #section link (e.g. about.html -> index.html#contact):
-  // scroll to it once loaded, then strip the hash from the address bar.
-  if (window.location.hash) {
-    var targetId = window.location.hash.slice(1);
+  // Arriving from another page pointed at a section (e.g. about.html links to
+  // index.html?section=contact): scroll to it once loaded, then clean the URL.
+  var params = new URLSearchParams(window.location.search);
+  var targetSection = params.get('section');
+  if (targetSection) {
     window.addEventListener('load', function () {
-      scrollToSection(targetId);
+      scrollToSection(targetSection);
       if (window.history && history.replaceState) {
-        history.replaceState(null, '', window.location.pathname + window.location.search);
+        history.replaceState(null, '', window.location.pathname);
       }
     });
   }
