@@ -3,8 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>chontent — We create content to spread the Word.</title>
-<meta name="description" content="chontent creates content to spread the Word — from Bern &amp; Zürich, Switzerland.">
+<title>chontent — Start your journey with God.</title>
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-K9X9ZZ46T0"></script>
@@ -192,6 +191,25 @@ nav .cta{
 .belief blockquote .hl{color:var(--gold); font-weight:700;}
 .belief cite{font-size:14px; letter-spacing:0.1em; text-transform:uppercase; color:var(--rose); font-style:normal;}
 
+/* ---------- STORY ---------- */
+.story{padding:120px 0; background:var(--cream);}
+.story .tag{font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14px; letter-spacing:0.16em; text-transform:uppercase; color:var(--red); margin-bottom:18px;}
+.story-grid{display:grid; grid-template-columns:0.8fr 1.2fr; gap:70px; align-items:start;}
+.story h2{font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:36px; line-height:1.15; letter-spacing:-0.01em;}
+.story-body p{font-size:17px; line-height:1.75; color:rgba(36,16,18,0.78); margin-bottom:18px;}
+.story-body p:last-child{margin-bottom:0;}
+.story-link{color:var(--red); font-weight:600; text-decoration:underline;}
+
+/* ---------- TESTIMONIALS ---------- */
+.testimonials{padding:0 0 130px; background:var(--cream);}
+.testimonials .tag{font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14px; letter-spacing:0.16em; text-transform:uppercase; color:var(--red);}
+.testi-card{
+  max-width:680px; margin:28px auto 0; background:#fff; border:1px solid rgba(36,16,18,0.08);
+  border-radius:20px; padding:48px 52px; text-align:center;
+}
+.testi-quote{font-size:19px; line-height:1.7; color:var(--ink); font-style:italic; margin-bottom:20px;}
+.testi-author{font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14px; color:var(--red);}
+
 /* ---------- TEAM ---------- */
 .team{padding:140px 0; background:var(--cream);}
 .team-head{max-width:640px; margin-bottom:70px;}
@@ -227,17 +245,35 @@ nav .cta{
 }
 .contact h2{font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:40px; line-height:1.12; letter-spacing:-0.01em; margin-bottom:24px;}
 .contact p.sub{font-size:16.5px; line-height:1.7; color:var(--rose); max-width:420px;}
-.contact .meta{margin-top:48px; font-size:14.5px; line-height:2; color:rgba(246,234,210,0.75);}
+.contact .meta{margin-top:28px; font-size:14.5px; line-height:2; color:rgba(246,234,210,0.75);}
 .contact .meta strong{color:var(--cream); font-weight:600;}
+
+.call-price{
+  margin-top:40px; background:rgba(246,234,210,0.07); border:1px solid rgba(246,234,210,0.18);
+  border-radius:18px; padding:30px 32px;
+}
+.price-amount{font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:32px; color:var(--gold); margin-bottom:16px;}
+.price-amount span{font-family:'Inter',sans-serif; font-weight:400; font-size:14px; color:var(--rose); text-transform:none; letter-spacing:0;}
+.price-list{list-style:none;}
+.price-list li{font-size:14.5px; line-height:1.8; color:var(--rose); padding-left:20px; position:relative;}
+.price-list li::before{content:"—"; position:absolute; left:0; color:var(--gold);}
+.price-buy{
+  display:inline-block; margin-top:18px;
+  background:var(--gold); color:var(--red-deep);
+  padding:12px 24px; border-radius:999px;
+  font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:13.5px;
+  text-transform:uppercase; letter-spacing:0.05em;
+}
 
 form{background:#fff; border-radius:22px; padding:44px; color:var(--ink);}
 .field{margin-bottom:20px;}
 .field label{display:block; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:12.5px; letter-spacing:0.06em; text-transform:uppercase; margin-bottom:9px; color:rgba(36,16,18,0.65);}
-.field input, .field textarea{
+.field input, .field textarea, .field select{
   width:100%; border:1.5px solid rgba(36,16,18,0.14); border-radius:12px;
   padding:14px 16px; font-family:'Inter',sans-serif; font-size:15px; color:var(--ink);
   background:var(--cream);
 }
+.field select{appearance:none; -webkit-appearance:none; padding-right:40px; background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='9'><path d='M1 1l6 6 6-6' stroke='%23241012' stroke-width='1.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>"); background-repeat:no-repeat; background-position:right 16px center;}
 .field textarea{min-height:110px; resize:vertical;}
 .row-2{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
 .submit-btn{
@@ -257,7 +293,6 @@ footer .fmark i{position:absolute;background:var(--red-deep);}
 footer .fmark .v{left:50%;top:0;width:4px;height:22px;transform:translateX(-50%);}
 footer .fmark .h{left:0;top:50%;width:22px;height:4px;transform:translateY(-50%);}
 </style>
-<style>.honeypot{display:none;}</style>
 </head>
 <body>
 
@@ -268,22 +303,22 @@ footer .fmark .h{left:0;top:50%;width:22px;height:4px;transform:translateY(-50%)
       <div class="wordmark">chontent</div>
     </div>
     <div class="links">
-      <a href="#mission">Mission</a>
-      <a href="#work">What We Create</a>
-      <a href="#team">Team</a>
+      <a href="#start">Start Here</a>
+      <a href="#story">My Story</a>
+      <a href="#call">Book a Call</a>
     </div>
-    <a href="#contact" class="cta">Get In Touch</a>
+    <a href="#call" class="cta">Book a Call</a>
   </nav>
 </header>
 
 <section class="hero">
   <div class="wrap">
-    <div class="eyebrow">Content Studio · Bern &amp; Zürich</div>
-    <h1>We create content<br>to spread <span class="hl">the Word.</span></h1>
-    <p class="lead">chontent builds video, social, and web content for ministries, churches, and believers who want to reach more people with the Gospel — made with the same craft and strategy we'd bring to any brand.</p>
+    <div class="eyebrow">PreachersRealm · Starter Resources</div>
+    <h1>Find God without<br>the <span class="hl">confusion.</span></h1>
+    <p class="lead">Simple videos, an honest guide, and a real conversation when you're ready for one — everything you need to actually get started, explained in plain language.</p>
     <div class="actions">
-      <a href="#contact" class="btn-primary">Start a Project</a>
-      <a href="#work" class="btn-ghost">See What We Create</a>
+      <a href="https://buy.stripe.com/test_aFabJ38Qb4PAeZT5Dv48000" class="btn-primary">Get the Starter Guide — $9.99</a>
+      <a href="https://buy.stripe.com/test_28EbJ3d6r81M2d71nf48001" class="btn-ghost">Book a Call</a>
     </div>
     <div class="hero-mark"><span class="line"></span> Walk the Path · Know the Word <span class="line"></span></div>
   </div>
@@ -292,38 +327,38 @@ footer .fmark .h{left:0;top:50%;width:22px;height:4px;transform:translateY(-50%)
 <section class="mission" id="mission">
   <div class="wrap">
     <div>
-      <div class="tag">Why chontent</div>
-      <h2>Good content shouldn't stop at good looking.</h2>
+      <div class="tag">Why PreachersRealm</div>
+      <h2>Getting started with God shouldn't feel like a test you have to pass first.</h2>
     </div>
     <div class="body">
-      <p>We believe the Gospel deserves to be carried by content that's as thoughtful and well-made as anything a brand would pay for — not an afterthought, not a stock template, not a shaky phone video.</p>
-      <p>chontent exists to close that gap. We plan, shoot, edit, and publish content built around one purpose: <strong>helping ministries and believers put the Word in front of more people, more clearly.</strong></p>
-      <p>Same craft we've always built with — strategy, production, publishing — now pointed entirely at a message worth spreading.</p>
+      <p>Most explanations of Christianity assume you already know the vocabulary — what "being saved" means, which verse goes where, how church even works. PreachersRealm doesn't assume that.</p>
+      <p><strong>Every video, every guide, and every conversation here is built for people standing at the very start</strong> — curious, maybe skeptical, not sure if any of this is even for them.</p>
+      <p>No pressure to perform a feeling you don't have yet. Just a clear next step, whenever you're ready to take it.</p>
     </div>
   </div>
 </section>
 
-<section class="services" id="work">
+<section class="services" id="start">
   <div class="wrap">
     <div class="services-head">
-      <div class="tag">What We Create</div>
-      <h2>Content built to carry the message further.</h2>
+      <div class="tag">How It Works</div>
+      <h2>Three simple steps, wherever you're starting.</h2>
     </div>
     <div class="service-grid">
       <div class="service-card">
         <div class="num">01</div>
-        <h3>Video &amp; Social Content</h3>
-        <p>Short-form and long-form videos for YouTube, Instagram, and TikTok — sermons, testimonies, and teaching made clear, watchable, and shareable.</p>
+        <h3>Watch</h3>
+        <p>Short, clear animated videos on YouTube, Instagram, and TikTok that explain one idea at a time — no jargon, no assumptions about what you already know.</p>
       </div>
       <div class="service-card">
         <div class="num">02</div>
-        <h3>Websites for Ministries</h3>
-        <p>Clean, fast websites for churches, ministries, and outreach projects — built to welcome newcomers and make the next step obvious.</p>
+        <h3>Read</h3>
+        <p>Get the Starter Guide ($9.99) — a short, honest walkthrough of what the Bible actually says about becoming a Christian, written to go with the first video.</p>
       </div>
       <div class="service-card">
         <div class="num">03</div>
-        <h3>Newsletters &amp; Campaigns</h3>
-        <p>Email and outreach campaigns that keep a congregation or community connected between Sundays, written in a voice people actually read.</p>
+        <h3>Talk</h3>
+        <p>When you're ready to ask your own questions, book a real one-on-one conversation — at your pace, with no pressure and no script.</p>
       </div>
     </div>
   </div>
@@ -336,63 +371,93 @@ footer .fmark .h{left:0;top:50%;width:22px;height:4px;transform:translateY(-50%)
   </div>
 </section>
 
-<section class="team" id="team">
+<section class="story" id="story">
   <div class="wrap">
-    <div class="team-head">
-      <div class="tag">Who We Are</div>
-      <h2>A small studio, built around one mission.</h2>
-    </div>
-    <div class="team-grid">
-      <div class="team-card">
-        <div class="avatar">Y</div>
-        <h3>Yves Hofstetter</h3>
-        <div class="role">Founder</div>
-        <p>Based in the Rapperswil region. Builds content, strategy, and websites — now all in service of one goal: getting the Word in front of more people.</p>
+    <div class="story-grid">
+      <div>
+        <div class="tag">My Story</div>
+        <h2>I started exactly the same way.</h2>
+      </div>
+      <div class="story-body">
+        <p>I didn't grow up with this figured out. I started unsure, a little hesitant, not knowing all the right words — the same place a lot of people watching are starting from right now.</p>
+        <p>That's why chontent exists. Not because I have it all worked out, but because I remember what it was like not to, and I wanted to build something for people who are exactly where I was.</p>
+        <p>If you're just starting out, <a href="https://buy.stripe.com/test_aFabJ38Qb4PAeZT5Dv48000" class="story-link">get the starter guide ($9.99)</a> — it walks through exactly what helped me. And if you've got questions a guide can't answer, you can always <a href="https://buy.stripe.com/test_28EbJ3d6r81M2d71nf48001" class="story-link">book a call</a> and we'll talk it through directly.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="contact" id="contact">
+<section class="testimonials">
+  <div class="wrap">
+    <div class="tag" style="text-align:center;">What People Are Saying</div>
+    <div class="testi-card">
+      <p class="testi-quote">"Yves has taught me one thing: Christianity is not about how often you go to church, it's about a relationship with God and with yourself. Everyone can learn it, and this is the right place."</p>
+      <div class="testi-author">— Fred</div>
+    </div>
+  </div>
+</section>
+
+<span id="guide" style="position:relative; top:-88px; display:block;"></span>
+<section class="contact" id="call">
   <div class="wrap">
     <div>
-      <div class="tag">Get In Touch</div>
-      <h2>Have a ministry or message to spread?</h2>
-      <p class="sub">Tell us what you're working on. We'll get back to you within a couple of days with how we'd approach it.</p>
+      <div class="tag">Get Started</div>
+      <h2>Ready for the next step?</h2>
+      <p class="sub">Grab the Starter Guide to read at your own pace, or book 30 minutes with Yves to talk it through directly. Not therapy, not a sales pitch, not a sermon — just an honest conversation, or an honest guide.</p>
+      <div class="call-price">
+        <div class="price-amount">$9.99 <span>· Starter Guide (PDF)</span></div>
+        <ul class="price-list">
+          <li>4–6 pages, written to go with the first video</li>
+          <li>What the Bible actually says about becoming a Christian</li>
+          <li>Yours to keep — read it once or come back to it</li>
+        </ul>
+        <a href="https://buy.stripe.com/test_aFabJ38Qb4PAeZT5Dv48000" class="price-buy">Buy Now — $9.99</a>
+      </div>
+      <div class="call-price" style="margin-top:16px;">
+        <div class="price-amount">$45 <span>/ 30-min call</span></div>
+        <ul class="price-list">
+          <li>One-on-one, over video or phone</li>
+          <li>Bring any question — doubts, a specific verse, what church even is</li>
+          <li>No pressure, no follow-up pitch</li>
+        </ul>
+        <a href="https://buy.stripe.com/test_28EbJ3d6r81M2d71nf48001" class="price-buy">Book Now — $45</a>
+      </div>
       <div class="meta">
-        <strong>chontent</strong><br>
-        Bern &amp; Zürich, Switzerland<br>
-        info@chontent.com
+        <strong>chontent</strong> · PreachersRealm companion site<br>
+        info@chontent.com<br>
+        <span style="opacity:0.75;">The guide is emailed to you automatically right after checkout. For calls, Yves will reply within a couple of days to set up a time.</span>
       </div>
     </div>
-    <form name="contact" method="POST" action="/?sent=1#contact" data-netlify="true" netlify-honeypot="bot-field">
-      <input type="hidden" name="form-name" value="contact">
-      <p class="honeypot"><label>Don&rsquo;t fill this out if you&rsquo;re human: <input name="bot-field"></label></p>
+    <form>
       <div class="row-2">
         <div class="field">
           <label>Name</label>
-          <input type="text" name="name" placeholder="Your name" required>
+          <input type="text" placeholder="Your name">
         </div>
         <div class="field">
-          <label>Phone</label>
-          <input type="tel" name="phone" placeholder="Your phone number">
+          <label>Email</label>
+          <input type="email" placeholder="you@example.com">
         </div>
       </div>
       <div class="row-2">
         <div class="field">
-          <label>Email</label>
-          <input type="email" name="email" placeholder="you@example.com" required>
+          <label>What's this about?</label>
+          <select id="request-type">
+            <option value="question">General question</option>
+            <option value="call">Something about my call</option>
+            <option value="guide">Something about my guide purchase</option>
+          </select>
         </div>
         <div class="field">
-          <label>Organization <span style="text-transform:none;font-weight:400;">(optional)</span></label>
-          <input type="text" name="company" placeholder="Church / ministry name">
+          <label>Preferred days / times <span style="text-transform:none;font-weight:400;">(optional)</span></label>
+          <input type="text" placeholder="e.g. weekday evenings">
         </div>
       </div>
       <div class="field">
         <label>Message</label>
-        <textarea name="message" placeholder="Tell us about your project..." required></textarea>
+        <textarea placeholder="Anything else to add?"></textarea>
       </div>
-      <button type="submit" class="submit-btn">Send Message</button>
+      <button type="submit" class="submit-btn">Send Request</button>
     </form>
   </div>
 </section>
@@ -400,7 +465,7 @@ footer .fmark .h{left:0;top:50%;width:22px;height:4px;transform:translateY(-50%)
 <footer>
   <div class="wrap">
     <div class="fbrand"><div class="fmark"><i class="v"></i><i class="h"></i></div>chontent</div>
-    <div>© 2026 chontent · Bern &amp; Zürich · <a href="links.html" style="color:var(--cream);">Links</a></div>
+    <div>© 2026 chontent · Bern &amp; Zürich</div>
   </div>
 </footer>
 
