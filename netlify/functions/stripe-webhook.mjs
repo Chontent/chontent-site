@@ -26,8 +26,8 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const PDF_PATH = path.join(__dirname, 'files', 'How-to-Become-a-Christian.pdf');
+const __fnDirname = path.dirname(fileURLToPath(import.meta.url));
+const PDF_PATH = path.join(__fnDirname, 'files', 'How-to-Become-a-Christian.pdf');
 
 // The Price ID of the Starter Guide product — only a purchase of this price
 // triggers the auto-email. Everything else (e.g. the call booking) is left
