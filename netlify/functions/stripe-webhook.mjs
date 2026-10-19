@@ -32,7 +32,7 @@ const PDF_PATH = path.join(__fnDirname, 'files', 'How-to-Become-a-Christian.pdf'
 // The Price ID of the Starter Guide product — only a purchase of this price
 // triggers the auto-email. Everything else (e.g. the call booking) is left
 // alone and handled manually, same as before.
-const GUIDE_PRICE_ID = 'price_1USCcjPmM826Rzhs74xuCttf';
+const GUIDE_PRICE_ID = 'price_1USKWlPmhY4AEW903Wm2Or2d';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
